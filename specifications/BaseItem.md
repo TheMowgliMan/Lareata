@@ -21,7 +21,7 @@ extends Node class_name BaseItem
 - int shoot_every_x_uses
 
 ## Constructor
-Should just run _set_stats_ and then _on_create_new 
+Should just run _set_stats_ and then _on_create_new_.
 
 ## Functions (Getsets are omitted unless otherwise specified)
 ### set_stats ()
