@@ -21,4 +21,15 @@ extends Node class_name BaseItem
 - int shoot_every_x_uses
 
 ## Functions (Getsets are omitted unless otherwise specified)
--To Be Added-
+### set_stats ()
+Sets the item's stats. Overrided by other items; just needs to set _crafting_item_ to true and _name_ to "BaseItem".
+### on_use (RootPlayer player)
+Must return _player_, may otherwise be empty.
+### accessory_tick (RootPlayer player, int delta)
+Must return _player_, may otherwise be empty.
+### on_create_new (RootPlayer player)
+Must return _player_, may otherwise be empty.
+### on_shoot_projectile (RootPlayer player)
+Must return _player_, may otherwise be empty.
+### inventory_tick (RootPlayer player)
+Must return _player_, may otherwise be empty.
