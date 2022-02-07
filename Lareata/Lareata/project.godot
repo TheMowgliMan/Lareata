@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "BaseItem",
+"language": "GDScript",
+"path": "res://Scenes/Base/BaseItem.gd"
+}, {
 "base": "Node2D",
 "class": "LareataRoot",
 "language": "GDScript",
-"path": "res://LareataRoot.gd"
+"path": "res://Scenes/Base/LareataRoot.gd"
 } ]
 _global_script_class_icons={
+"BaseItem": "",
 "LareataRoot": ""
 }
 

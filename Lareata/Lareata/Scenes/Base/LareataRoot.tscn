@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://LareataRoot.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Base/LareataRoot.gd" type="Script" id=1]
 [ext_resource path="res://textures/tiles/Base_Tiles.png" type="Texture" id=2]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
