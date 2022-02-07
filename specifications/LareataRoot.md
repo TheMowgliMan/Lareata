@@ -38,5 +38,5 @@ Should run _.accessory_tick(RootPlayer player, int delta)_ on every accessory in
 Should run _.inventory_tick(RootPlayer player, int delta)_ on every item in the inventory, provided that there is an item in the slot. Then, it should return _player_.
 ### __physics_process (float delta)
 Should run _get_controls()_, _root_player.reset_variables()_, and _root_player.regenerate_life()_. Then, it should run _equipped_accessory_update (RootPlayer player, int delta)_ and _item_inventory_tick (RootPlayer player, int delta)_.
-### reset_inventory (int length)
-Deletes everything in the inventory, and then adds _length_ _false_'s to the inventory.
+### reset_inventory (int inv, int acc, int armor)
+Deletes everything in the inventory, and then adds _inv_ _false_'s to the inventory.
