@@ -1,0 +1,22 @@
+# Changelog
+## Instructions to Add More Entries
+To add more entries, first add five hyphens, the update name, and five more hyphens, like so: -----Alpha 0.1-----. Then, mention all that was added in the update,
+using these tags:
+ADD: Added a feature.
+UPDATE: Updated or improved a feature.
+REMOVE: Removed a feature.
+OPTIMISE: Optimised a feature.
+BUGFIX: Fixed a bug in a feature.
+
+## Changelog
+-----Alpha 0.3.1-----
+ADD: Added map lighting
+ADD: Added sky colored background panel
+
+-----Alpha 0.3-----
+ADD: Added an ore generator.
+ADD: Added the main menu.
+
+-----Alpha 0.2-----
+ADD: Added fractal-noise-based map generation.
+UPDATE: Improved the player controller.
