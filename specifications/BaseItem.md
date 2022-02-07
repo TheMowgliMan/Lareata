@@ -19,6 +19,7 @@ extends Node class_name BaseItem
 - ProjectileObject shoot
 - int projectile_speed
 - int shoot_every_x_uses
+- int speed
 
 ## Constructor
 Should just run _set_stats_ and then _on_create_new_.
