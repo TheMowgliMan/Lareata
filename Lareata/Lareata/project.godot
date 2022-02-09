@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scenes/Base/BaseItem.gd"
 }, {
+"base": "KinematicBody2D",
+"class": "BasePlayer",
+"language": "GDScript",
+"path": "res://Scenes/Base/BasePlayer.gd"
+}, {
 "base": "Node2D",
 "class": "LareataRoot",
 "language": "GDScript",
@@ -21,6 +26,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "BaseItem": "",
+"BasePlayer": "",
 "LareataRoot": ""
 }
 
@@ -29,8 +35,13 @@ _global_script_class_icons={
 config/name="Lareata"
 config/icon="res://icon.png"
 
+[debug]
+
+settings/stdout/print_fps=true
+
 [display]
 
+window/vsync/use_vsync=false
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
@@ -73,4 +84,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
 environment/default_environment="res://default_env.tres"

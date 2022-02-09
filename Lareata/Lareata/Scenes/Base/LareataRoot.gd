@@ -3,11 +3,10 @@ extends Node2D
 class_name LareataRoot
 
 # Load stuff
-var BasePlayer = load("BasePlayer.gd")
-var BaseItem = load("BaseItem.gd")
+var BasePlayer = load("Scenes/Base/BasePlayer.gd")
+var BaseItem = load("Scenes/Base/BaseItem.gd")
 
 # Variables
-var root_player = BasePlayer.new() # Ignore if this doesn't exist
 var world_map = []
 var light_map = []
 var inventory = []
@@ -90,10 +89,7 @@ func __mapgen_finished_sig(map):
 func get_controls(delta):
 	var up_vel = 0
 	var right_vel = 0
-	var jumping = Input.is_action_pressed("ui_accept")
-	
-	if !root_player.is_on_floor():
-		jumping = 0
+	var jumping = Input.is_action_pressed("ui_up")
 	
 	if Input.is_action_pressed("ui_up"):
 		up_vel -= 1
@@ -104,7 +100,7 @@ func get_controls(delta):
 	if Input.is_action_pressed("ui_right"):
 		right_vel += 1
 		
-	root_player.move(up_vel, right_vel, jumping, delta)
+	$BasePlayer.move(up_vel, right_vel, jumping, delta)
 	
 func equipped_accessory_update(player, delta):
 	for item in accessory_slots:
@@ -122,11 +118,11 @@ func item_inventory_tick(player, delta):
 
 func _physics_process(delta):
 	get_controls(delta)
-	root_player.reset_variables()
-	root_player.regenerate_life()
+	$BasePlayer.reset_variables()
+	$BasePlayer.regenerate_life()
 	
-	equipped_accessory_update(root_player, delta)
-	item_inventory_tick(root_player, delta)
+	equipped_accessory_update($BasePlayer, delta)
+	item_inventory_tick($BasePlayer, delta)
 	
 func reset_inventory(inv, acc, armor):
 	inventory = []

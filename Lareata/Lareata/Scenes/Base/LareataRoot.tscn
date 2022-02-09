@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Base/LareataRoot.gd" type="Script" id=1]
 [ext_resource path="res://textures/tiles/Base_Tiles.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Base/BasePlayer.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -251,6 +252,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [node name="LareataRoot" type="Node2D"]
 script = ExtResource( 1 )
+
+[node name="BasePlayer" parent="." instance=ExtResource( 3 )]
+position = Vector2( 520, 163 )
 
 [node name="WorldMap" type="TileMap" parent="."]
 tile_set = SubResource( 10 )
